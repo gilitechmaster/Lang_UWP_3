@@ -29,7 +29,56 @@ namespace Lang_UWP_2
             await Navigation.PopAsync();
         }
 
-        async void OnCalc1ButtonClicked(object sender, EventArgs e) // 개체분해버튼
+        async void OnCalc1ButtonClicked(object sender, EventArgs e)
+        {
+            var note = (Note)BindingContext;
+
+            if (string.IsNullOrWhiteSpace(note.Filename))
+            {
+                var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
+                File.WriteAllText(filename, note.Text);
+            }
+
+            else
+            {
+                var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
+                File.WriteAllText(note.Filename, note.Text);
+                StreamWriter sw = new StreamWriter(filename, true);
+                string[] arr = note.Text.Split(new string[]{
+
+                    ". ",  // 순차처리하므로 ". "를 앞에해두어야 한다.
+                    ".",
+                    ", ",
+                    ",",
+                    "? ",
+                    "?",
+                    "! ",
+                    "!",
+                    "·", // 법률문서에 사용되는 기호
+                    " "
+
+                        }, StringSplitOptions.None);
+
+
+                foreach (string B in arr)
+                {
+                    sw.WriteLine(B);
+                    
+                    if (B.Contains("\n")  // replace로 2차처리
+                        )
+                        sw.WriteLine("{0}", B
+                          .Replace("\n", "")
+                          );
+                }
+
+                sw.Close();
+
+            }
+
+            await Navigation.PopAsync();
+        }
+
+        async void OnCalc2ButtonClicked(object sender, EventArgs e) // 개체분해버튼
         {
             var note = (Note)BindingContext;
 
@@ -98,7 +147,7 @@ namespace Lang_UWP_2
             await Navigation.PopAsync();
         }
 
-        async void OnCalc2ButtonClicked(object sender, EventArgs e) // 에너지분해버튼
+        async void OnCalc3ButtonClicked(object sender, EventArgs e) // 에너지분해버튼
         {
             var note = (Note)BindingContext;
 
@@ -145,6 +194,7 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
+
                     if (B.EndsWith("다") == true) // 에너지
                         sw.WriteLine("{0}", B
 
@@ -163,7 +213,7 @@ namespace Lang_UWP_2
             await Navigation.PopAsync();
         }
 
-        async void OnCalc3ButtonClicked(object sender, EventArgs e) // 에너지분해버튼
+        async void OnCalc4ButtonClicked(object sender, EventArgs e) // 에너지분해버튼
         {
             var note = (Note)BindingContext;
 
@@ -213,11 +263,11 @@ namespace Lang_UWP_2
 
 
                     if (B.EndsWith("서") == true) // 기호
-                    sw.WriteLine("{0}", B
+                        sw.WriteLine("{0}", B
 
-                    .Replace("에서", "서")
-                    .Replace("서", " + ")
-                    );
+                        .Replace("에서", "서")
+                        .Replace("서", " + ")
+                        );
 
                 }
                 sw.Close();
