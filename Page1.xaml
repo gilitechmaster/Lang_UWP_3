@@ -20,18 +20,22 @@
             <Button Text="저장"
                     Clicked="OnSaveButtonClicked"/>
             <Button Grid.Column="1"
-                    Text="개체분해"
+                    Text="기초분해"
                     BackgroundColor="LightGoldenrodYellow"
                     Clicked="OnCalc1ButtonClicked"/>
             <Button Grid.Column="2"
-                    Text="에너지분해"
+                    Text="개체분해"
                     BackgroundColor="LightGoldenrodYellow"
                     Clicked="OnCalc2ButtonClicked"/>
             <Button Grid.Column="3"
-                    Text="기호분해"
+                    Text="에너지분해"
                     BackgroundColor="LightGoldenrodYellow"
                     Clicked="OnCalc3ButtonClicked"/>
             <Button Grid.Column="4"
+                    Text="기호분해"
+                    BackgroundColor="LightGoldenrodYellow"
+                    Clicked="OnCalc4ButtonClicked"/>
+            <Button Grid.Column="5"
                     Text="삭제"
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
