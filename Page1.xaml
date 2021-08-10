@@ -36,9 +36,9 @@
                     BackgroundColor="LightGoldenrodYellow"
                     Clicked="OnCalc4ButtonClicked"/>
             <Button Grid.Column="5"
-                    Text="기호분해"
+                    Text="종합분해"
                     BackgroundColor="Yellow"
-                    Clicked="OnCalc4ButtonClicked"/>
+                    Clicked="OnCalc5ButtonClicked"/>
             <Button Grid.Column="6"
                     Text="삭제"
                     Clicked="OnDeleteButtonClicked"/>
