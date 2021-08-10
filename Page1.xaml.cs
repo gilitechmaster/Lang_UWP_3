@@ -297,10 +297,31 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
+                    if (B.EndsWith("가") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("가", "+")
+                        );
+
                     if (B.EndsWith("는") == true) // 기호
                         sw.WriteLine("{0}", B
                         .Replace("또는", "+")
                         .Replace("는", "+")
+                        );
+
+                    if (B.EndsWith("를") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("를", "+")
+                        );
+
+                    if (B.EndsWith("및") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("및", "+")
+                        );
+
+                    if (B.EndsWith("서") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("에서", "서")
+                        .Replace("서", "+")
                         );
 
                     if (B.EndsWith("은") == true) // 기호
@@ -323,16 +344,9 @@ namespace Lang_UWP_2
                         .Replace("의", "+")
                         );
 
-                    if (B.EndsWith("서") == true) // 기호
-                        sw.WriteLine("{0}", B
-                        .Replace("에서", "서")
-                        .Replace("서", "+")
-                        );
 
-                    if (B.EndsWith("및") == true) // 기호
-                        sw.WriteLine("{0}", B
-                        .Replace("및", "+")
-                        );
+
+                    
 
                 }
                 sw.Close();
