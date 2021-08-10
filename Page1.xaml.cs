@@ -125,9 +125,11 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
-                    if (B.EndsWith("학") == true) // 개체
+
+                    if (B.EndsWith("계") == true) // 개체
                         sw.WriteLine("{0}", B
-                            .Replace("광화학", "광화학 = 개체")
+                            .Replace("학계", "학계 = 개체")
+                            .Replace("산업계", "산업계 = 개체")
                             );
 
                     if (B.EndsWith("성") == true) // 개체
@@ -139,6 +141,17 @@ namespace Lang_UWP_2
                         sw.WriteLine("{0}", B
                             .Replace("매질", "매질 = 개체")
                             );
+
+                    if (B.EndsWith("학") == true) // 개체
+                        sw.WriteLine("{0}", B
+                            .Replace("광화학", "광화학 = 개체")
+                            );
+
+                    if (B.EndsWith("성") == true) // 개체
+                        sw.WriteLine("{0}", B
+                            .Replace("양성", "양성 = 개체")
+                            );
+
                 }
                 sw.Close();
 
@@ -195,14 +208,38 @@ namespace Lang_UWP_2
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
 
-                    if (B.EndsWith("다") == true) // 에너지
+                    //if (B.EndsWith("다") == true) // 에너지
+                        //sw.WriteLine("{0}", B
+
+                            //.Replace("있다", "있")
+                            //.Replace("있", "E = 100")
+
+                            //.Replace("없다", "없")
+                            //.Replace("없", "E = 0")
+
+                            //.Replace("수행한다", "수행한다 = E") // 수행한다 = 1요소
+                            //);
+
+                    if (B.StartsWith("있") == true) // 에너지
                         sw.WriteLine("{0}", B
 
                             .Replace("있다", "있")
                             .Replace("있", "E = 100")
+                            );
+
+                    if (B.StartsWith("없") == true) // 에너지
+                        sw.WriteLine("{0}", B
 
                             .Replace("없다", "없")
                             .Replace("없", "E = 0")
+                            );
+
+                    if (B.EndsWith("큰") == true) // 에너지
+                        sw.WriteLine("{0}", B
+
+                            .Replace("큰", "크ㄴ")
+                            .Replace("크ㄴ", "크")
+                            .Replace("크", "E = ?")
                             );
 
                 }
@@ -266,9 +303,24 @@ namespace Lang_UWP_2
                         .Replace("는", "+")
                         );
 
+                    if (B.EndsWith("은") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("은", "+")
+                        );
+
+                    if (B.EndsWith("을") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("을", "+")
+                        );
+
                     if (B.EndsWith("이") == true) // 기호
                         sw.WriteLine("{0}", B
                         .Replace("이", "+")
+                        );
+
+                    if (B.EndsWith("의") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("의", "+")
                         );
 
                     if (B.EndsWith("서") == true) // 기호
@@ -276,6 +328,12 @@ namespace Lang_UWP_2
                         .Replace("에서", "서")
                         .Replace("서", "+")
                         );
+
+                    if (B.EndsWith("및") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("및", "+")
+                        );
+
                 }
                 sw.Close();
             }
@@ -316,62 +374,13 @@ namespace Lang_UWP_2
                 foreach (string B in arr)
                 {
 
-                    //sw.WriteLine(B);
+                    sw.WriteLine(B);
+                    // 종합버튼은 작업이 헷갈리므로
+                    // 다른 프로그램 혹은 다음에 종합한다.
 
-                    // 언어물리는 3변수로 정리한다.
-                    // 현재 3변수에서 시간은 고려하지 않는다.
-                    // 시간은 에너지와 동일한 클래스이다.
-
-                    // 1. 개체 2. 에너지 3. 기호(조사, 접속사, 기호 등)
-                    // 나는 집에 가다 = 나+집+가다 = 개체+개체+E
-
-                    // 개체 + 에너지 = 1최소요소
-                    // 1최소요소는 절대요소이다.
-                    // 최대절대요소는 1개의 띄어쓰기로 한정한다.
-                    // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
-
-
-                    if (B.EndsWith("학") == true) // 개체
-                        sw.WriteLine("{0}", B
-                            .Replace("광화학", "광화학 = 개체")
-                            );
-
-                    if (B.EndsWith("성") == true) // 개체
-                        sw.WriteLine("{0}", B
-                            .Replace("반응성", "반응성 = 개체")
-                            );
-
-                    if (B.EndsWith("질") == true) // 개체
-                        sw.WriteLine("{0}", B
-                            .Replace("매질", "매질 = 개체")
-                            );
-
-                    if (B.EndsWith("다") == true) // 에너지
-                        sw.WriteLine("{0}", B
-
-                            .Replace("있다", "있")
-                            .Replace("있", "E = 100")
-
-                            .Replace("없다", "없")
-                            .Replace("없", "E = 0")
-                            );
-
-                    if (B.EndsWith("는") == true) // 기호
-                        sw.WriteLine("{0}", B
-                        .Replace("또는", "+")
-                        .Replace("는", "+")
-                        );
-
-                    if (B.EndsWith("이") == true) // 기호
-                        sw.WriteLine("{0}", B
-                        .Replace("이", "+")
-                        );
-
-                    if (B.EndsWith("서") == true) // 기호
-                        sw.WriteLine("{0}", B
-                        .Replace("에서", "서")
-                        .Replace("서", "+")
-                        );
+                    // 종합버튼 = 개체 + 기호 + 에너지
+                    // 3요소를 동시에 처리해낸다.
+                
                 }
                 sw.Close();
             }
