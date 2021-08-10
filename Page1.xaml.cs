@@ -125,20 +125,20 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
-
-
                     if (B.EndsWith("학") == true) // 개체
                         sw.WriteLine("{0}", B
-
-                            .Replace("광화학", "개체")
+                            .Replace("광화학", "광화학 = 개체")
                             );
+
                     if (B.EndsWith("성") == true) // 개체
                         sw.WriteLine("{0}", B
-
-                            .Replace("반응성", "개체")
+                            .Replace("반응성", "반응성 = 개체")
                             );
 
-
+                    if (B.EndsWith("질") == true) // 개체
+                        sw.WriteLine("{0}", B
+                            .Replace("매질", "매질 = 개체")
+                            );
                 }
                 sw.Close();
 
@@ -260,18 +260,24 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
+                    if (B.EndsWith("는") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("또는", "+")
+                        .Replace("는", "+")
+                        );
 
+                    if (B.EndsWith("이") == true) // 기호
+                        sw.WriteLine("{0}", B
+                        .Replace("이", "+")
+                        );
 
                     if (B.EndsWith("서") == true) // 기호
                         sw.WriteLine("{0}", B
-
                         .Replace("에서", "서")
-                        .Replace("서", " + ")
+                        .Replace("서", "+")
                         );
-
                 }
                 sw.Close();
-
             }
 
             await Navigation.PopAsync();
