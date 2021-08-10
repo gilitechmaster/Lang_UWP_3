@@ -145,15 +145,6 @@ namespace Lang_UWP_2
                     // 최대절대요소는 1개의 띄어쓰기로 한정한다.
                     // 띄어쓰기 갯수는 최대 2개까지로 임시값 한정한다.
 
-
-
-                    //if (B.EndsWith("서") == true) // 기호
-                        //sw.WriteLine("{0}", B
-
-                            //.Replace("에서", "서")
-                            //.Replace("서", " + ")
-                            //);
-
                     if (B.EndsWith("다") == true) // 에너지
                         sw.WriteLine("{0}", B
 
