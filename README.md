@@ -8,6 +8,7 @@ Lang_UWP_2 Page1_5.xaml.cs에서 파생
 개체버튼, 에너지버튼, 기호버튼으로 나누고
 종합버튼 = 개체 + 에너지 + 기호를 동시처리
 
+
 <b>Page1_1.xaml.cs</b>
 
 ex)
@@ -22,6 +23,7 @@ ex)
 
 "있-"은 절대적으로 시작자 = StartWith
 "-한다"는 절대적으로 끝자 = EndsWith
+
 
 <b>Page1_2.xaml.cs</b>
 
