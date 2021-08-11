@@ -113,7 +113,7 @@ namespace Lang_UWP_2
 
                     //sw.WriteLine(B);
 
-                    // 개체 + 에너지 = 1최소요소 = NXE
+                    // 개체 + 에너지 = 1최소요소 = NXET
                     // 개체 = N
                     // 기호 = X
                     // 에너지 = E
@@ -169,7 +169,7 @@ namespace Lang_UWP_2
 
                     //sw.WriteLine(B);
 
-                    // 개체 + 에너지 = 1최소요소 = NXE
+                    // 개체 + 에너지 = 1최소요소 = NXET
                     // 개체 = N
                     // 기호 = X
                     // 에너지 = E
@@ -261,7 +261,7 @@ namespace Lang_UWP_2
 
                     //sw.WriteLine(B);
 
-                    // 개체 + 에너지 = 1최소요소 = NXE
+                    // 개체 + 에너지 = 1최소요소 = NXET
                     // 개체 = N
                     // 기호 = X
                     // 에너지 = E
@@ -358,7 +358,7 @@ namespace Lang_UWP_2
 
                     //sw.WriteLine(B);
 
-                    // 개체 + 에너지 = 1최소요소 = NXE
+                    // 개체 + 에너지 = 1최소요소 = NXET
                     // 개체 = N
                     // 기호 = X
                     // 에너지 = E
