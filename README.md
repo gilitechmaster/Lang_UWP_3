@@ -63,6 +63,10 @@ LastIndexOf로 사용하게 된다.
 
 보다 심플한 방정식으로 재정의한다.
 
+<b>Page1_4.xaml</b>
+
+시간분해버튼을 추가한다.
+
 <b>Page1_4.xaml.cs</b>
 
 NXE는 
