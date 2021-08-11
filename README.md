@@ -1,6 +1,6 @@
 # Lang_UWP_3 = 언어용계산기
 <pre>
-Lang_UWP_2 Page1_5.xaml.cs에서 파생
+<b>Lang_UWP_2 Page1_5.xaml.cs에서 파생</b>
 
 개체 + 에너지 = 물리언어
 개체 기호 에너지 = 물리언어
