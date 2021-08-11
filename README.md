@@ -1,6 +1,6 @@
 # Lang_UWP_3 = 언어용계산기
 <pre>
-<b>Lang_UWP_2 Page1_5.xaml.cs에서 파생</b>
+Lang_UWP_2 Page1_5.xaml.cs에서 파생
 
 개체 + 에너지 = 물리언어
 개체 기호 에너지 = 물리언어
@@ -8,7 +8,7 @@
 개체버튼, 에너지버튼, 기호버튼으로 나누고
 종합버튼 = 개체 + 에너지 + 기호를 동시처리
 
-Page1_1.xaml.cs
+<b>Page1_1.xaml.cs</b>
 
 ex)
 
@@ -23,7 +23,7 @@ ex)
 "있-"은 절대적으로 시작자 = StartWith
 "-한다"는 절대적으로 끝자 = EndsWith
 
-Page1_2.xaml.cs
+<b>Page1_2.xaml.cs</b>
 
 개체는 명사가 주요이지만
 명사가 아닌, 실제사물이다.
