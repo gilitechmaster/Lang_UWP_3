@@ -7,9 +7,9 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using Lang_UWP_2;
+using Lang_UWP_3;
 
-namespace Lang_UWP_2
+namespace Lang_UWP_3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page2 : ContentPage
