@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Xamarin.Forms;
 
-namespace Lang_UWP_2
+namespace Lang_UWP_3
 {
     public partial class MainPage : ContentPage
     {
