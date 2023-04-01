@@ -3,7 +3,7 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Lang_UWP_2
+namespace Lang_UWP_3
 {
     public partial class App : Application
     {
