@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 using Xamarin.Forms.Xaml;
 
-namespace Lang_UWP_2
+namespace Lang_UWP_3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
