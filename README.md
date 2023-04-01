@@ -9,7 +9,7 @@ Lang_UWP_2 Page1_5.xaml.cs에서 파생
 종합버튼 = 개체 + 에너지 + 기호를 동시처리
 
 
-<b>Page1_1.xaml.cs</b>
+<b>Page1.xaml.cs</b>
 
 ex)
 
