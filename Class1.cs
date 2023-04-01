@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lang_UWP_2
+namespace Lang_UWP_3
 {
     class Note
     {
